@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         maven { url = uri("https://developer.zebra.com/nexus/content/groups/public/") }
     }
 }
-rootProject.name = "ZebraDataCaptureDemo"
+rootProject.name = "AISuite_QuickStart"
 include(":app")
