@@ -1,4 +1,4 @@
-name: Crie o APK do aplicativo Zebra
+name: Build Zebra App APK
 
 on:
   push:
