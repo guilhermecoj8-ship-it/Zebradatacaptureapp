@@ -1,4 +1,4 @@
-name: Build Zebra App APK
+name: Crie o APK do aplicativo Zebra
 
 on:
   push:
@@ -19,11 +19,12 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
+    - name: Setup Gradle Wrapper
+      run: |
+        gradle wrapper --gradle-version 8.5
 
     - name: Build APK with Gradle
-      run: gradle assembleDebug --stacktrace
+      run: ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
